@@ -334,7 +334,11 @@
 			<h3>Formato Obligatorio:</h3>
 			<div class="step">
 				<span class="step-number">1</span>
-				El valor debe estar entre <code>-23.50</code> y <code>5.00</code>
+				El valor debe estar en el rango según tipo de equipo:
+				<ul style="margin: 8px 0 0 20px;">
+					<li><strong>NAP:</strong> entre <code>-3.50</code> y <code>5.00</code></li>
+					<li><strong>CDO:</strong> entre <code>-23.50</code> y <code>5.00</code></li>
+				</ul>
 			</div>
 			<div class="step">
 				<span class="step-number">2</span>
@@ -342,7 +346,17 @@
 			</div>
 			
 			<div class="example">
-				<div class="example-title">✅ Valores CORRECTOS:</div>
+				<div class="example-title">✅ Valores CORRECTOS (NAP):</div>
+				<code>-3.50</code><br>
+				<code>-2.45</code><br>
+				<code>0.50</code><br>
+				<code>1.25</code><br>
+				<code>4.99</code>
+			</div>
+			
+			<div class="example">
+				<div class="example-title">✅ Valores CORRECTOS (CDO):</div>
+				<code>-23.50</code><br>
 				<code>-22.45</code><br>
 				<code>-18.02</code><br>
 				<code>-3.50</code><br>
@@ -354,7 +368,8 @@
 				<div style="color: var(--danger); font-weight: bold; margin-bottom: 8px;">❌ Valores INCORRECTOS:</div>
 				<code style="color: var(--danger);">-22.4</code> (falta un decimal)<br>
 				<code style="color: var(--danger);">-22</code> (sin decimales)<br>
-				<code style="color: var(--danger);">-25.00</code> (fuera de rango)<br>
+				<code style="color: var(--danger);">-4.00</code> (fuera de rango para NAP)<br>
+				<code style="color: var(--danger);">-25.00</code> (fuera de rango para CDO)<br>
 				<code style="color: var(--danger);">10.00</code> (fuera de rango)<br>
 				<code style="color: var(--danger);">-22,45</code> (coma en vez de punto)
 			</div>
