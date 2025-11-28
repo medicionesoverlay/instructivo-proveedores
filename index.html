@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Instructivo de Uso - Proveedores</title>
+	<style>
+		:root {
+			--bg: #000000;
+			--card: #1a1a1a;
+			--muted: #b0b0b0;
+			--text: #ffffff;
+			--accent: #00a9e0;
+			--success: #00c853;
+			--danger: #ff4444;
+			--warning: #ffaa00;
+		}
+		* { box-sizing: border-box; }
+		body {
+			font-family: ui-sans-serif, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+			background: var(--bg);
+			color: var(--text);
+			margin: 0;
+			padding: 0;
+			line-height: 1.6;
+		}
+		
+		.header {
+			background: linear-gradient(135deg, var(--accent) 0%, #0080b0 100%);
+			padding: 32px 24px;
+			text-align: center;
+			box-shadow: 0 4px 20px rgba(0,169,224,0.3);
+		}
+		
+		h1 {
+			margin: 0;
+			font-size: 32px;
+			color: #ffffff;
+		}
+		
+		.subtitle {
+			color: rgba(255,255,255,0.9);
+			font-size: 16px;
+			margin-top: 8px;
+		}
+		
+		.container {
+			max-width: 900px;
+			margin: 0 auto;
+			padding: 40px 24px;
+		}
+		
+		.section {
+			background: var(--card);
+			border: 1px solid #333;
+			border-radius: 12px;
+			padding: 24px;
+			margin-bottom: 24px;
+		}
+		
+		.section h2 {
+			color: var(--accent);
+			font-size: 24px;
+			margin: 0 0 16px 0;
+			display: flex;
+			align-items: center;
+			gap: 12px;
+		}
+		
+		.section h3 {
+			color: var(--text);
+			font-size: 18px;
+			margin: 20px 0 12px 0;
+		}
+		
+		.step {
+			background: #0a0a0a;
+			border-left: 4px solid var(--accent);
+			padding: 16px;
+			margin: 12px 0;
+			border-radius: 4px;
+		}
+		
+		.step-number {
+			display: inline-block;
+			background: var(--accent);
+			color: #000;
+			width: 28px;
+			height: 28px;
+			border-radius: 50%;
+			text-align: center;
+			line-height: 28px;
+			font-weight: bold;
+			margin-right: 12px;
+		}
+		
+		.alert {
+			padding: 12px 16px;
+			border-radius: 8px;
+			margin: 12px 0;
+			display: flex;
+			align-items: flex-start;
+			gap: 12px;
+		}
+		
+		.alert-info {
+			background: rgba(0,169,224,0.1);
+			border: 1px solid var(--accent);
+		}
+		
+		.alert-warning {
+			background: rgba(255,170,0,0.1);
+			border: 1px solid var(--warning);
+			color: var(--warning);
+		}
+		
+		.alert-danger {
+			background: rgba(255,68,68,0.1);
+			border: 1px solid var(--danger);
+			color: var(--danger);
+		}
+		
+		.alert-success {
+			background: rgba(0,200,83,0.1);
+			border: 1px solid var(--success);
+			color: var(--success);
+		}
+		
+		code {
+			background: #2d2d2d;
+			padding: 2px 8px;
+			border-radius: 4px;
+			font-family: 'Courier New', monospace;
+			color: var(--accent);
+		}
+		
+		.example {
+			background: #0d0d0d;
+			border: 1px solid #333;
+			padding: 12px;
+			border-radius: 8px;
+			margin: 12px 0;
+			font-size: 14px;
+		}
+		
+		.example-title {
+			color: var(--success);
+			font-weight: bold;
+			margin-bottom: 8px;
+		}
+		
+		ul, ol {
+			margin: 12px 0;
+			padding-left: 24px;
+		}
+		
+		li {
+			margin: 8px 0;
+		}
+		
+		.btn-back {
+			display: inline-block;
+			background: var(--accent);
+			color: #ffffff;
+			padding: 12px 24px;
+			border-radius: 8px;
+			text-decoration: none;
+			font-weight: 600;
+			margin-top: 24px;
+		}
+		
+		.btn-back:hover {
+			background: #0090c0;
+		}
+		
+		.footer {
+			text-align: center;
+			color: var(--muted);
+			padding: 40px 24px;
+			border-top: 1px solid #333;
+			margin-top: 60px;
+			font-size: 14px;
+		}
+		
+		@media (max-width: 768px) {
+			.header { padding: 24px 16px; }
+			h1 { font-size: 24px; }
+			.container { padding: 24px 16px; }
+			.section { padding: 16px; }
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<h1>📖 Instructivo de Uso</h1>
+		<div class="subtitle">Guía para Proveedores - Sistema de Mediciones ODN</div>
+	</div>
+	
+	<div class="container">
+		<!-- Introducción -->
+		<div class="section">
+			<h2>👋 Bienvenido</h2>
+			<p>Este instructivo te guiará paso a paso en el uso del sistema de mediciones ODN. Lee cuidadosamente cada sección antes de comenzar.</p>
+			<div class="alert alert-info">
+				<span>ℹ️</span>
+				<div>
+					<strong>Importante:</strong> Asegúrate de tener conexión a internet estable durante todo el proceso. Las mediciones se sincronizan en tiempo real.
+				</div>
+			</div>
+		</div>
+		
+		<!-- Paso 1: Acceso -->
+		<div class="section">
+			<h2>🔐 Paso 1: Acceso al Sistema</h2>
+			<div class="step">
+				<span class="step-number">1</span>
+				<strong>Abre el navegador web</strong> (Chrome, Firefox, Edge o Safari)
+			</div>
+			<div class="step">
+				<span class="step-number">2</span>
+				<strong>Ingresa a tu panel de proveedor</strong> usando el enlace que te proporcionaron
+			</div>
+			<div class="step">
+				<span class="step-number">3</span>
+				<strong>Verifica la conexión</strong> - En la parte inferior debe aparecer "🟢 Conectado"
+			</div>
+			
+			<div class="alert alert-warning">
+				<span>⚠️</span>
+				<div>Si aparece "🔴 Sin conexión", verifica tu internet antes de continuar.</div>
+			</div>
+		</div>
+		
+		<!-- Paso 2: Dashboard -->
+		<div class="section">
+			<h2>📊 Paso 2: Entender el Dashboard</h2>
+			<p>En la parte superior verás 6 tarjetas con estadísticas:</p>
+			<ul>
+				<li><strong>Total Activos:</strong> Cantidad total de elementos a medir</li>
+				<li><strong>Pendientes:</strong> Elementos que aún no has medido</li>
+				<li><strong>Medidos:</strong> Elementos completados y aprobados</li>
+				<li><strong>Rechazados:</strong> Mediciones que requieren corrección</li>
+				<li><strong>% Aprobación:</strong> Tu tasa de aprobación (medidos / total enviados)</li>
+				<li><strong>Progreso:</strong> Porcentaje de avance total</li>
+			</ul>
+			
+			<div class="alert alert-success">
+				<span>💡</span>
+				<div><strong>Tip:</strong> Mantén tu % de Aprobación alto siguiendo cuidadosamente las instrucciones de este manual.</div>
+			</div>
+		</div>
+		
+		<!-- Paso 3: Buscar Activo -->
+		<div class="section">
+			<h2>🔍 Paso 3: Buscar un Activo</h2>
+			<div class="step">
+				<span class="step-number">1</span>
+				<strong>Usa el buscador</strong> en la parte superior para encontrar el activo (ej: NRAFA02)
+			</div>
+			<div class="step">
+				<span class="step-number">2</span>
+				<strong>Filtra por estado:</strong> Selecciona "Pendientes" para ver solo los que faltan
+			</div>
+			<div class="step">
+				<span class="step-number">3</span>
+				<strong>Click en "Ver"</strong> para expandir el detalle del activo
+			</div>
+		</div>
+		
+		<!-- Paso 4: Tomar Fotos -->
+		<div class="section">
+			<h2>📷 Paso 4: Capturar Fotos (IMPORTANTE)</h2>
+			
+			<h3>Opciones de Captura:</h3>
+			<ul>
+				<li><strong>📷 Tomar Foto:</strong> Abre la cámara de tu dispositivo directamente</li>
+				<li><strong>📁 Adjuntar:</strong> Selecciona archivos ya guardados en tu dispositivo</li>
+			</ul>
+			
+			<h3>Requisitos de las Fotos:</h3>
+			<div class="alert alert-danger">
+				<span>❌</span>
+				<div>
+					<strong>Requisitos obligatorios:</strong>
+					<ul style="margin: 8px 0 0 0;">
+						<li><strong>Máximo 1 foto</strong> por elemento</li>
+						<li>El elemento debe estar <strong>completamente visible</strong></li>
+						<li>La foto debe estar <strong>enfocada y nítida</strong></li>
+						<li>Debe verse claramente la <strong>nomenclatura</strong></li>
+					</ul>
+				</div>
+			</div>
+			
+			<h3>Recomendaciones:</h3>
+			<ul>
+				<li>✅ Asegúrate de tener <strong>buena iluminación</strong></li>
+				<li>✅ Verifica que la foto esté <strong>clara antes de continuar</strong></li>
+				<li>✅ Si es NAP, <strong>debes medir cada puerto del NAP</strong></li>
+				<li>✅ Si es CDO, toma foto de la <strong>caja completa</strong></li>
+			</ul>
+			
+			<div class="example">
+				<div class="example-title">✅ Ejemplo de BUENAS fotos:</div>
+				• Foto horizontal, elemento centrado<br>
+				• Iluminación uniforme, sin sombras<br>
+				• Placa/etiqueta legible<br>
+				• Distancia adecuada (ni muy cerca ni muy lejos)
+			</div>
+			
+			<div class="example" style="background: #1a0505; border-color: var(--danger);">
+				<div style="color: var(--danger); font-weight: bold; margin-bottom: 8px;">❌ Fotos RECHAZADAS:</div>
+				• Borrosas o desenfocadas<br>
+				• Muy oscuras o con contra luz<br>
+				• No se ve el elemento completo<br>
+				• Nomenclatura ilegible
+			</div>
+			
+			<div class="alert alert-info">
+				<span>📍</span>
+				<div><strong>GPS Automático:</strong> La ubicación se captura automáticamente al tomar/adjuntar fotos. Asegúrate de dar permisos de ubicación si te lo solicita.</div>
+			</div>
+		</div>
+		
+		<!-- Paso 5: Valor de Medición -->
+		<div class="section">
+			<h2>📊 Paso 5: Ingresar Valor de Medición</h2>
+			
+			<h3>Formato Obligatorio:</h3>
+			<div class="step">
+				<span class="step-number">1</span>
+				El valor debe estar entre <code>-23.50</code> y <code>5.00</code>
+			</div>
+			<div class="step">
+				<span class="step-number">2</span>
+				Debe tener <strong>exactamente 2 decimales</strong> separados por punto
+			</div>
+			
+			<div class="example">
+				<div class="example-title">✅ Valores CORRECTOS:</div>
+				<code>-22.45</code><br>
+				<code>-18.02</code><br>
+				<code>-3.50</code><br>
+				<code>1.25</code><br>
+				<code>4.99</code>
+			</div>
+			
+			<div class="example" style="background: #1a0505; border-color: var(--danger);">
+				<div style="color: var(--danger); font-weight: bold; margin-bottom: 8px;">❌ Valores INCORRECTOS:</div>
+				<code style="color: var(--danger);">-22.4</code> (falta un decimal)<br>
+				<code style="color: var(--danger);">-22</code> (sin decimales)<br>
+				<code style="color: var(--danger);">-25.00</code> (fuera de rango)<br>
+				<code style="color: var(--danger);">10.00</code> (fuera de rango)<br>
+				<code style="color: var(--danger);">-22,45</code> (coma en vez de punto)
+			</div>
+			
+			<div class="alert alert-warning">
+				<span>⚠️</span>
+				<div>El sistema validará automáticamente el formato. Si es incorrecto, no te permitirá enviar.</div>
+			</div>
+		</div>
+		
+		<!-- Paso 6: Enviar a Revisión -->
+		<div class="section">
+			<h2>✅ Paso 6: Enviar a Revisión</h2>
+			
+			<div class="step">
+				<span class="step-number">1</span>
+				Verifica que tengas <strong>al menos 1 foto adjunta</strong>
+			</div>
+			<div class="step">
+				<span class="step-number">2</span>
+				Verifica que el <strong>valor de medición sea correcto</strong>
+			</div>
+			<div class="step">
+				<span class="step-number">3</span>
+				(Opcional) Agrega una <strong>nota</strong> si necesitas aclarar algo
+			</div>
+			<div class="step">
+				<span class="step-number">4</span>
+				Click en el botón <strong>"✅ Enviar a Revisión"</strong>
+			</div>
+			
+			<div class="alert alert-success">
+				<span>✅</span>
+				<div>Si todo es correcto, verás un mensaje de confirmación y el estado cambiará a "En Revisión".</div>
+			</div>
+			
+			<div class="alert alert-info">
+				<span>ℹ️</span>
+				<div><strong>¿Qué pasa después?</strong> Un verificador revisará tu medición. Puede aprobarla o rechazarla con observaciones.</div>
+			</div>
+		</div>
+		
+		<!-- Mediciones Rechazadas -->
+		<div class="section">
+			<h2>❌ ¿Qué hacer si Rechazan tu Medición?</h2>
+			
+			<p>Si una medición es rechazada, verás un <strong>banner rojo</strong> en la fila del activo:</p>
+			
+			<div style="background: #2d0a0a; border-left: 4px solid var(--danger); padding: 12px; border-radius: 6px; margin: 16px 0;">
+				<strong style="color: var(--danger);">❌ MEDICIÓN RECHAZADA</strong>
+				<div style="margin-top: 8px;">Ejemplo: "no corresponde foto - Volver a cargar"</div>
+			</div>
+			
+			<h3>Pasos a seguir:</h3>
+			<div class="step">
+				<span class="step-number">1</span>
+				Click en "Ver" para expandir el detalle
+			</div>
+			<div class="step">
+				<span class="step-number">2</span>
+				Lee cuidadosamente la <strong>observación del verificador</strong>
+			</div>
+			<div class="step">
+				<span class="step-number">3</span>
+				Corrige el problema (nuevas fotos, valor correcto, etc.)
+			</div>
+			<div class="step">
+				<span class="step-number">4</span>
+				Vuelve a enviar a revisión
+			</div>
+			
+			<div class="alert alert-warning">
+				<span>⚠️</span>
+				<div>Las fotos anteriores se eliminan automáticamente al rechazar. Debes adjuntar nuevas fotos.</div>
+			</div>
+		</div>
+		
+		<!-- Notas y Comentarios -->
+		<div class="section">
+			<h2>📝 Notas y Comentarios (Opcional)</h2>
+			
+			<p>Puedes agregar notas a cada activo usando el botón <strong>"Nota"</strong>:</p>
+			
+			<h3>Tipos de notas:</h3>
+			<ul>
+				<li><strong>Observación:</strong> Para comentarios generales</li>
+				<li><strong>Problema:</strong> Si encuentras alguna dificultad</li>
+				<li><strong>Comentario:</strong> Información adicional</li>
+				<li><strong>Estado:</strong> Para registrar el estado actual</li>
+			</ul>
+			
+			<div class="alert alert-info">
+				<span>💡</span>
+				<div>Las notas son útiles si necesitas aclarar algo sobre la medición o reportar un problema.</div>
+			</div>
+		</div>
+		
+		<!-- Reiniciar Medición -->
+		<div class="section">
+			<h2>🔄 Reiniciar una Medición</h2>
+			
+			<p>Si necesitas reiniciar completamente una medición (borrar fotos y empezar de cero):</p>
+			
+			<div class="step">
+				<span class="step-number">1</span>
+				Expande el detalle del activo
+			</div>
+			<div class="step">
+				<span class="step-number">2</span>
+				Click en el botón <strong>"🔄 Reiniciar"</strong>
+			</div>
+			<div class="step">
+				<span class="step-number">3</span>
+				Ingresa el PIN de reinicio: <code>3960</code>
+			</div>
+			<div class="step">
+				<span class="step-number">4</span>
+				Confirma que deseas reiniciar
+			</div>
+			
+			<div class="alert alert-danger">
+				<span>⚠️</span>
+				<div><strong>ATENCIÓN:</strong> Esto eliminará TODAS las fotos y datos de la medición. No se puede deshacer.</div>
+			</div>
+		</div>
+		
+		<!-- Exportar Datos -->
+		<div class="section">
+			<h2>📊 Exportar tus Datos</h2>
+			
+			<p>Puedes exportar un resumen de tus mediciones en formato CSV:</p>
+			
+			<div class="step">
+				<span class="step-number">1</span>
+				Click en el botón <strong>"Exportar CSV"</strong> en la parte superior
+			</div>
+			<div class="step">
+				<span class="step-number">2</span>
+				El archivo se descargará automáticamente con la fecha actual
+			</div>
+			
+			<p>El CSV incluye: Activo, Clasificación, Estado, Cantidad de fotos, Notas, GPS, etc.</p>
+		</div>
+		
+		<!-- Problemas Comunes -->
+		<div class="section">
+			<h2>🆘 Problemas Comunes y Soluciones</h2>
+			
+			<h3>❓ "No puedo adjuntar fotos"</h3>
+			<p>✅ Verifica que hayas dado permisos de cámara/archivos al navegador</p>
+			
+			<h3>❓ "El botón 'Enviar a Revisión' está deshabilitado"</h3>
+			<p>✅ Debes adjuntar al menos 1 foto primero</p>
+			
+			<h3>❓ "Error al guardar: Sin conexión"</h3>
+			<p>✅ Verifica tu conexión a internet. El sistema requiere conexión para funcionar.</p>
+			
+			<h3>❓ "La foto aparece y luego desaparece"</h3>
+			<p>✅ Puede haber un problema de subida a Drive. Verifica tu conexión y vuelve a intentar.</p>
+			
+			<h3>❓ "No encuentro el activo"</h3>
+			<p>✅ Usa el buscador escribiendo el código exacto (ej: NRAFA02)</p>
+			
+			<h3>❓ "El valor de medición no se acepta"</h3>
+			<p>✅ Verifica el formato: entre -23.50 y 5.00, con punto y 2 decimales (ej: -22.45)</p>
+			
+			<div class="alert alert-info">
+				<span>📞</span>
+				<div>Si tienes problemas que no están listados aquí, contacta al supervisor.</div>
+			</div>
+		</div>
+		
+		<!-- Mejores Prácticas -->
+		<div class="section">
+			<h2>⭐ Mejores Prácticas</h2>
+			
+			<ul>
+				<li>✅ Trabaja en horario con <strong>buena luz natural</strong></li>
+				<li>✅ Lleva un <strong>paño</strong> para limpiar elementos antes de fotografiar</li>
+				<li>✅ Verifica la foto en pantalla antes de continuar</li>
+				<li>✅ Ingresa el valor de medición <strong>inmediatamente después de medirlo</strong></li>
+				<li>✅ Envía a revisión <strong>el mismo día</strong> que tomas las fotos</li>
+				<li>✅ Revisa diariamente si hay <strong>mediciones rechazadas</strong></li>
+			</ul>
+		</div>
+		
+		<!-- Resumen Final -->
+		<div class="section">
+			<h2>📋 Resumen del Flujo de Trabajo</h2>
+			
+			<div style="background: #0d0d0d; padding: 20px; border-radius: 8px; border: 1px solid var(--accent);">
+				<strong style="color: var(--accent); font-size: 18px;">Proceso Completo:</strong>
+				<ol style="margin-top: 12px;">
+					<li>🔍 Buscar y expandir el activo</li>
+					<li>📷 Tomar/Adjuntar foto (máximo 1)</li>
+					<li>📊 Ingresar valor de medición (-23.50 a 5.00)</li>
+					<li>📝 (Opcional) Agregar nota si es necesario</li>
+					<li>✅ Click en "Enviar a Revisión"</li>
+					<li>⏳ Esperar aprobación del verificador</li>
+					<li>✅ Si aprueba: ¡Listo! Pasa a "Medido"</li>
+					<li>❌ Si rechaza: Leer observación, corregir y reenviar</li>
+				</ol>
+			</div>
+		</div>
+		
+		<div style="text-align: center; margin-top: 32px;">
+			<a href="javascript:history.back()" class="btn-back">← Volver a mi Panel</a>
+		</div>
+	</div>
+	
+	<div class="footer">
+		<p><strong>Sistema de Mediciones ODN - Personal Telecom Argentina</strong></p>
+		<p style="margin-top: 8px;">Para soporte técnico, contacta al supervisor del proyecto</p>
+		<p style="font-size: 12px; margin-top: 16px; color: #666;">© 2025 - Versión 1.0</p>
+	</div>
+</body>
+</html>
